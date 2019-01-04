@@ -33,15 +33,9 @@
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.twitter</groupId>
-      <artifactId>hbc-core</artifactId> <!-- or hbc-twitter4j -->
-      <version>2.2.0</version> <!-- or whatever the latest version is -->
-    </dependency>
-    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
     </dependency>
-
     <dependency>
       <groupId>me.xdrop</groupId>
       <artifactId>jrand</artifactId>
