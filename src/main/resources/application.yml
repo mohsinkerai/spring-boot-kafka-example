@@ -16,7 +16,6 @@ my.kafka:
   topic: users
   group: my_group
 management:
-  context-path: /actuator
   endpoint:
     health:
       enabled: true
