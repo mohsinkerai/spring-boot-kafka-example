@@ -15,3 +15,9 @@ spring:
 my.kafka:
   topic: users
   group: my_group
+management:
+  context-path: /actuator
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
