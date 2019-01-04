@@ -14,7 +14,7 @@ public class Consumer {
 
   // Reference to SpelEX
   // https://github.com/spring-projects/spring-kafka/issues/132
-  @KafkaListener(topics = "${my.kafka.topic}", groupId = "my.kafka.group.")
+  @KafkaListener(topics = "${my.kafka.topic}", groupId = "my.kafka.group")
   public void consume(String message) throws IOException, InterruptedException {
     Thread.sleep(Math.abs(new Random().nextInt())%1000);
     logger.info(String.format("#### -> Consumed message -> %s", message));
