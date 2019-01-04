@@ -2,7 +2,6 @@ package com.demo.kafka.springbootwithkafka.service;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -25,8 +24,6 @@ public class Consumer {
       @Header(KafkaHeaders.OFFSET) List<Long> offsets) throws IOException, InterruptedException {
     logger.info("Received {} Messages in Partition {} and Offet {}", messages.size(), partitions,
         offsets);
-    for (String message : messages) {
-      logger.info(String.format("#### -> Consumed message -> %s", message));
-    }
+    logger.info("Messages {}", messages);
   }
 }
