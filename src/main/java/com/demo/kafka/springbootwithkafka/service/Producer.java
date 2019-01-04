@@ -1,5 +1,6 @@
 package com.demo.kafka.springbootwithkafka.service;
 
+import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,7 +23,9 @@ public class Producer {
   }
 
   public void sendMessage(String message) {
+    int num = new Random().nextInt(5);
+    message = num + message;
     logger.info(String.format("#### -> Producing message -> %s", message));
-    this.kafkaTemplate.send(TOPIC, message);
+    this.kafkaTemplate.send(TOPIC, String.valueOf(num), message);
   }
 }

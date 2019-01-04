@@ -3,7 +3,7 @@ server:
 spring:
   kafka:
     listener:
-      concurrency: 10
+      concurrency: 3
       type: batch
     consumer:
       bootstrap-servers: localhost:9092

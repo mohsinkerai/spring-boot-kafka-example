@@ -18,7 +18,7 @@ public class Consumer {
 
   // Reference to SpelEX
   // https://github.com/spring-projects/spring-kafka/issues/132
-  @KafkaListener(topics = "${my.kafka.topic}", groupId = "my.kafka.group")
+  @KafkaListener(id = "careem-listener", topics = "${my.kafka.topic}", groupId = "my.kafka.group")
   public void consume(List<String> messages,
       @Header(KafkaHeaders.RECEIVED_PARTITION_ID) List<Integer> partitions,
       @Header(KafkaHeaders.OFFSET) List<Long> offsets) throws IOException, InterruptedException {
